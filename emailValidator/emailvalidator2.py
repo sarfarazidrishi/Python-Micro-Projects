@@ -14,8 +14,8 @@ import re
 # {n,} - n or more occurrences
 # {n,m} - between n and m occurrences"""
 
-email_condition="^[a-z]+[\._]?[a-z 0-9]+[@]\w+[.]\w{2,3}$"
-user_email=input("Enter email address: ")
+email_condition = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$"
+user_email = input("Enter email address: ")
 if re.search(email_condition, user_email):
     print("sahi hai email")
 else:
