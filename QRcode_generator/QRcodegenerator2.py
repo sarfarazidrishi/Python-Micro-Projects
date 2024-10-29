@@ -15,10 +15,10 @@ image=qr.make_image( #this method will create image
     back_color="yellow" #background_color
 )
 
-logo=Image.open("salambhai.png").convert("RGBA") #.convert("rbga") add alpgha value, 3rd argument of .paste method it maintains transparency of logo
-logo_size=200 #size in pixel 
+logo=Image.open("WhatsApp_Image_2024-10-29_at_10.16.04_5a91d627-removebg-preview.png").convert("RGBA") #.convert("rbga") add alpgha value, 3rd argument of .paste method it maintains transparency of logo
+logo_size=250 #size in pixel 
 logo=logo.resize((logo_size, logo_size)) #first value : width , second value: height
-image.paste(logo, ((image.size[0]-logo.size[0])//2, (image.size[1]-logo.size[1])//2), logo)
+image.paste(logo, ((image.size[0]-logo.size[0])//2, (image.size[1]-logo.size[1])-40), logo)
 """ comment for the line above: img.size[0] represents width of img and img.size[1]  represents height of img
 similarly for logo and 
 //2 two forward slashes are division it return non-float number 
@@ -26,5 +26,5 @@ if X/y gives 2.5 then use x//y it wil give only 2 (basically // return a whole n
 this helps better in positioning the image
 """
 
-image.save("shahzadupi.png") #Hint : you can save it as linkedinlogo1.png to preserve transparency
+image.save("WhatsApp Image1 2024-10-291 at1 10.16.04_fc9b6fa6.jpg") #Hint : you can save it as linkedinlogo1.png to preserve transparency
 image.show() #this method will open generated qr code default image view of your system
