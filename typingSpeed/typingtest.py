@@ -4,36 +4,32 @@ import random as r
 
 paragraphs = [
     """"When possibilities arise, every decimal matters. One calculator shows 0.0099, 
-    acknowledging even the smallest chance, while another rounds down to zero, dismissing it. 
-    In a world full of hidden potentials, even the slightest possibility can lead to great outcomes.""",
+        acknowledging even the smallest chance, while another rounds down to zero, dismissing it. 
+        In a world full of hidden potentials, even the slightest possibility can lead to great outcomes.""",
 
     """Some occurrences may seem too small to be important, yet that tiny probability might hold the 
-    key to a significant outcome. One calculator accounts for this with 0.0099, grasping even the 
-    slightest chance. The other disregards it. Life rewards those who notice even invisible opportunities.""",
+        key to a significant outcome. One calculator accounts for this with 0.0099, grasping even the 
+        slightest chance. The other disregards it. Life rewards those who notice even invisible opportunities.""",
 
     """Life is filled with subtle chances that often slip by unnoticed. One calculator registers 
-    the faintest possibility with 0.0099, seizing every opening. The other rounds to zero, discarding
-    it entirely. Sometimes, all it takes is one small chance to spark something remarkable.""",
+        the faintest possibility with 0.0099, seizing every opening. The other rounds to zero, discarding
+        it entirely. Sometimes, all it takes is one small chance to spark something remarkable.""",
 
     """If we dismiss the smallest opportunities, we risk losing what might have been extraordinary.
-    One calculator captures this by showing 0.0099, valuing every potential. The other rounds it away 
-    to zero. Let every fraction of a chance count; sometimes, that’s all it takes to make a difference.""",
+        One calculator captures this by showing 0.0099, valuing every potential. The other rounds it away 
+        to zero. Let every fraction of a chance count; sometimes, that’s all it takes to make a difference.""",
 
     """Precision makes an impact in math and in life. The difference between 0.0099 and 0 may 
-    seem trivial, but it carries weight. One captures every chance, however slight, while the other
-    ignores it. Success often lies in what others fail to observe; pay attention to every decimal."""
+        seem trivial, but it carries weight. One captures every chance, however slight, while the other
+        ignores it. Success often lies in what others fail to observe; pay attention to every decimal."""
 ]
-
 testing_para=r.choice(paragraphs)
-# testing_para="testing_para hello bro kya haal kaise ho"
-print(testing_para)
 
 typing_start_time=time.time()
-user_input=input("Type the paragraph: ")
+user_input=input(f"Type the paragraph: {testing_para} \n ")
 typing_end_time=time.time()
 
 def word_count(testing_para, userInput):
-    
     testing_words=testing_para.split()
     user_input_words=userInput.split()
     
@@ -71,3 +67,4 @@ def speed_calculator(timeUsed, total_words_typed, correctWordCount):
 
 # word_count(testing_para, user_input)
 speed_calculator(time_taken, total_words_typed,correct_words_count )
+    
