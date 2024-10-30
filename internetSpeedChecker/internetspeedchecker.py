@@ -1,15 +1,21 @@
 from tkinter import *
 import speedtest
+import threading
 
 def speedcheck():
-    spdtest=speedtest.Speedtest()
-    spdtest.get_servers()
-    down=str(round(spdtest.download()/(10**6), 3))+ "mbps"
-    up=str(round(spdtest.upload()/(10**6), 3))+ "mbps"
+    def  check():
+        try:
+            spdtest=speedtest.Speedtest()
+            spdtest.get_servers()
+            down=str(round(spdtest.download()/(10**6), 3))+ "mbps"
+            up=str(round(spdtest.upload()/(10**6), 3))+ "mbps"
     
-    dn_speed_display.config(text=down)
-    up_speed_display.config(text=up)
-    
+            dn_speed_display.config(text=down)
+            up_speed_display.config(text=up)
+        except EXCEPTION as e:
+            dn_speed_display.config(text="error")
+            up_speed_display.config(text="interent connection check kro jaani")
+    threading.Thread(target=check).start()
     
 spdtest=Tk()
 spdtest.title("Internet speed test")
